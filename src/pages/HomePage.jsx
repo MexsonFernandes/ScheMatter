@@ -31,7 +31,7 @@ function HomePage() {
       {/* Centered "Under Construction" Section */}
       <section className="text-center max-w-2xl mx-auto p-8 bg-white/90 backdrop-blur-md rounded-xl shadow-2xl border border-gray-200/50">
         <div className="flex justify-center mb-6">
-          <Cog className="w-16 h-16 text-green-600 animate-spin-slow" />
+          <Cog className="w-16 h-16 text-primary animate-spin-slow" />
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
           Site Under Construction
@@ -40,7 +40,7 @@ function HomePage() {
           We're busy building a new digital home for Schematter. In the meantime, you can reach out directly for all your 3D printing and CAD needs.
         </p>
         <div className="flex flex-col items-center space-y-4">
-          <div className="flex items-center space-x-2 text-green-700 font-semibold text-lg">
+          <div className="flex items-center space-x-2 text-primary font-semibold text-lg">
             <Mail className="w-6 h-6" />
             <a href="mailto:carl.desouza@schematter.in" className="hover:underline">carl.desouza@schematter.in</a>
           </div>

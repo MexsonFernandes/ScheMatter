@@ -10,7 +10,7 @@ function Layout({ children }) {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
-      <header className="bg-white/70 backdrop-blur-md border-b border-white/20 sticky top-0 z-50 shadow-lg">
+      <header className="bg-white/70 backdrop-blur-md border-b border-white/20 sticky top-0 z-50 shadow-lg hidden">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center space-x-3">
@@ -67,7 +67,7 @@ function Layout({ children }) {
       <main>{children}</main>
 
       {/* Footer */}
-      <footer className="relative py-12 px-4">
+      <footer className="relative py-12 px-4 hidden">
         <div className="absolute inset-0 bg-gray-900/95 backdrop-blur-md"></div>
         <div className="container mx-auto relative z-10 text-white">
           <div className="grid md:grid-cols-4 gap-8">
