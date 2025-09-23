@@ -16,6 +16,7 @@ import {
   Globe,
   Building,
   Calendar,
+  PhoneCall
 } from 'lucide-react';
 
 // Import images
@@ -43,6 +44,11 @@ function HomePage() {
           <div className="flex items-center space-x-2 text-primary font-semibold text-lg">
             <Mail className="w-6 h-6" />
             <a href="mailto:carl.desouza@schematter.in" className="hover:underline">carl.desouza@schematter.in</a>
+          </div>
+          <div className="flex items-center space-x-2 text-primary font-semibold text-lg">
+            <PhoneCall className="w-6 h-6" />
+            <a href="tel:0832-2976999" className="hover:underline">0832-2976999</a> or&nbsp;
+            <a href="tel:919823406444" className="hover:underline">+91 9823406444</a>
           </div>
           <p className="text-sm text-gray-500">
             Click the email address above to get in touch.
