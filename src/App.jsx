@@ -9,6 +9,7 @@ import './App.css';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
+import CaseStudyDetailPage from './pages/CaseStudyDetailPage';
 
 // Admin Pages
 import AdminLayout from './components/layouts/AdminLayout';
@@ -28,6 +29,7 @@ function App() {
           <Route element={<Layout><Outlet /></Layout>}>
             <Route path="/" element={<HomePage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/case-study/:slug" element={<CaseStudyDetailPage />} />
           </Route>
 
           {/* Admin Login */}

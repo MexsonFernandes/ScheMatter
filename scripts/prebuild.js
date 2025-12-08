@@ -1,6 +1,6 @@
-import { fetchPortfolioItems } from './src/lib/portfolioData.js';
 import fs from 'fs';
 import path from 'path';
+import { loadEnv } from 'vite';
 
 /**
  * Pre-build script to fetch and cache portfolio data
@@ -10,11 +10,12 @@ async function prebuild() {
     console.log('🔄 Fetching portfolio data from Supabase...');
 
     try {
+        const env = loadEnv(process.env.NODE_ENV, process.cwd());
         // Dynamically import supabase (ESM)
         const { createClient } = await import('@supabase/supabase-js');
 
-        const supabaseUrl = process.env.VITE_SUPABASE_URL;
-        const supabaseAnonKey = process.env.VITE_SUPABASE_ANON_KEY;
+        const supabaseUrl = env.VITE_SUPABASE_URL;
+        const supabaseAnonKey = env.VITE_SUPABASE_ANON_KEY;
 
         if (!supabaseUrl || !supabaseAnonKey) {
             throw new Error('Missing VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY environment variables');
