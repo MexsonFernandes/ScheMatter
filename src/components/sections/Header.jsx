@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '../ui/button';
 import logo from '../../assets/images/schematter-logo.png';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,69 +18,90 @@ function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            setIsMobileMenuOpen(false);
+    // Handle scrolling to sections - works from any page
+    const handleNavigateToSection = (sectionId) => {
+        setIsMobileMenuOpen(false);
+
+        // If we're on the homepage, just scroll
+        if (location.pathname === '/') {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        } else {
+            // Navigate to homepage with hash, then scroll after navigation
+            navigate(`/#${sectionId}`);
         }
     };
+
+    // Scroll to section after navigation (for hash links)
+    useEffect(() => {
+        if (location.hash) {
+            const sectionId = location.hash.substring(1);
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    }, [location]);
 
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? 'bg-white/80 backdrop-blur-lg shadow-lg'
-                    : 'bg-transparent'
+                ? 'bg-white/80 backdrop-blur-lg shadow-lg'
+                : 'bg-transparent'
                 }`}
         >
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <div className="flex items-center">
+                    <Link to="/" className="flex items-center">
                         <img
                             src={logo}
                             alt="Schematter Logo"
                             className="h-12 w-auto"
                         />
-                    </div>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-8">
                         <button
-                            onClick={() => scrollToSection('home')}
+                            onClick={() => handleNavigateToSection('home')}
                             className="text-gray-700 hover:text-green-600 transition-colors font-medium"
                         >
                             Home
                         </button>
                         <button
-                            onClick={() => scrollToSection('services')}
+                            onClick={() => handleNavigateToSection('services')}
                             className="text-gray-700 hover:text-green-600 transition-colors font-medium"
                         >
                             Services
                         </button>
                         <button
-                            onClick={() => scrollToSection('about')}
+                            onClick={() => handleNavigateToSection('about')}
                             className="text-gray-700 hover:text-green-600 transition-colors font-medium"
                         >
                             About
                         </button>
                         <button
-                            onClick={() => scrollToSection('portfolio')}
+                            onClick={() => handleNavigateToSection('portfolio')}
                             className="text-gray-700 hover:text-green-600 transition-colors font-medium"
                         >
                             Portfolio
                         </button>
-                        <button
-                            onClick={() => scrollToSection('contact')}
-                            className="text-gray-700 hover:text-green-600 transition-colors font-medium"
+                        <Link
+                            to="/case-studies"
+                            className="text-gray-700 hover:text-green-600 transition-colors font-medium text-left"
                         >
-                            Contact
-                        </button>
+                            Case Study
+                        </Link>
                         <Button
-                            onClick={() => scrollToSection('contact')}
+                            onClick={() => handleNavigateToSection('contact')}
                             className="bg-gradient-to-r from-green-700 via-green-600 to-green-500 hover:from-green-800 hover:via-green-700 hover:to-green-600 text-white"
                         >
-                            Get Started
+                            Start Now
                         </Button>
                     </nav>
 
@@ -99,37 +123,38 @@ function Header() {
                     <div className="md:hidden py-4 animate-slide-up">
                         <nav className="flex flex-col space-y-4">
                             <button
-                                onClick={() => scrollToSection('home')}
+                                onClick={() => handleNavigateToSection('home')}
                                 className="text-gray-700 hover:text-green-600 transition-colors font-medium text-left"
                             >
                                 Home
                             </button>
                             <button
-                                onClick={() => scrollToSection('services')}
+                                onClick={() => handleNavigateToSection('services')}
                                 className="text-gray-700 hover:text-green-600 transition-colors font-medium text-left"
                             >
                                 Services
                             </button>
                             <button
-                                onClick={() => scrollToSection('about')}
+                                onClick={() => handleNavigateToSection('about')}
                                 className="text-gray-700 hover:text-green-600 transition-colors font-medium text-left"
                             >
                                 About
                             </button>
                             <button
-                                onClick={() => scrollToSection('portfolio')}
+                                onClick={() => handleNavigateToSection('portfolio')}
                                 className="text-gray-700 hover:text-green-600 transition-colors font-medium text-left"
                             >
                                 Portfolio
                             </button>
-                            <button
-                                onClick={() => scrollToSection('contact')}
+                            <Link
+                                to="/case-studies"
                                 className="text-gray-700 hover:text-green-600 transition-colors font-medium text-left"
+                                onClick={() => setIsMobileMenuOpen(false)}
                             >
-                                Contact
-                            </button>
+                                Case Study
+                            </Link>
                             <Button
-                                onClick={() => scrollToSection('contact')}
+                                onClick={() => handleNavigateToSection('contact')}
                                 className="bg-gradient-to-r from-green-700 via-green-600 to-green-500 hover:from-green-800 hover:via-green-700 hover:to-green-600 text-white w-full"
                             >
                                 Get Started

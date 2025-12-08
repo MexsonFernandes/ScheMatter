@@ -1,27 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import logo from '../../assets/images/schematter-logo.png';
 
 function Footer() {
     const currentYear = new Date().getFullYear();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const footerLinks = {
         company: [
-            { label: 'About Us', href: '#about' },
-            { label: 'Our Services', href: '#services' },
-            { label: 'Portfolio', href: '#portfolio' },
-            { label: 'Contact', href: '#contact' }
+            { label: 'About Us', href: '#about', type: 'scroll' },
+            { label: 'Our Services', href: '#services', type: 'scroll' },
+            { label: 'Portfolio', href: '#portfolio', type: 'scroll' },
+            { label: 'Contact', href: '#contact', type: 'scroll' }
         ],
         services: [
-            { label: '3D Printing', href: '#services' },
-            { label: 'CAD Design', href: '#services' },
-            { label: 'Prototyping', href: '#services' },
-            { label: 'Collaboration', href: '#services' }
+            { label: '3D Printing', href: '#services', type: 'scroll' },
+            { label: 'CAD Design', href: '#services', type: 'scroll' },
+            { label: 'Prototyping', href: '#services', type: 'scroll' },
+            { label: 'Collaboration', href: '#services', type: 'scroll' }
         ],
         support: [
-            { label: 'FAQ', href: '#' },
-            { label: 'Privacy Policy', href: '#' },
-            { label: 'Terms of Service', href: '#' },
-            { label: 'Support', href: '#contact' }
+            { label: 'Case Studies', href: '/case-studies', type: 'route' },
+            { label: 'Privacy Policy', href: '/privacy-policy', type: 'route' },
+            { label: 'Terms of Service', href: '/terms-of-service', type: 'route' },
+            { label: 'Support', href: '#contact', type: 'scroll' }
         ]
     };
 
@@ -32,14 +36,36 @@ function Footer() {
         { icon: Linkedin, href: 'https://www.linkedin.com/company/schematter/', label: 'LinkedIn' }
     ];
 
-    const scrollToSection = (href) => {
+    // Handle scrolling to sections - works from any page
+    const handleNavigateToSection = (href) => {
         if (href.startsWith('#')) {
-            const element = document.getElementById(href.substring(1));
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+            const sectionId = href.substring(1);
+
+            // If we're on the homepage, just scroll
+            if (location.pathname === '/') {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                // Navigate to homepage with hash, then scroll after navigation
+                navigate(`/${href}`);
             }
         }
     };
+
+    // Scroll to section after navigation (for hash links)
+    useEffect(() => {
+        if (location.hash) {
+            const sectionId = location.hash.substring(1);
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    }, [location]);
 
     return (
         <footer className="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white">
@@ -48,9 +74,11 @@ function Footer() {
                     {/* Brand Column */}
                     <div className="lg:col-span-2">
                         <div className="flex items-center space-x-2 mb-4">
-                            <div className="w-10 h-10 bg-gradient-to-br from-green-700 via-green-600 to-green-500 rounded-lg flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">S</span>
-                            </div>
+                            <img
+                                src={logo}
+                                alt="Schematter Logo"
+                                className="h-12 w-auto"
+                            />
                             <span className="text-2xl font-bold">Schematter</span>
                         </div>
                         <p className="text-gray-300 mb-6 leading-relaxed">
@@ -84,12 +112,21 @@ function Footer() {
                         <ul className="space-y-2">
                             {footerLinks.company.map((link, index) => (
                                 <li key={index}>
-                                    <button
-                                        onClick={() => scrollToSection(link.href)}
-                                        className="text-gray-300 hover:text-cyan-400 transition-colors"
-                                    >
-                                        {link.label}
-                                    </button>
+                                    {link.type === 'route' ? (
+                                        <Link
+                                            to={link.href}
+                                            className="text-gray-300 hover:text-cyan-400 transition-colors"
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    ) : (
+                                        <button
+                                            onClick={() => handleNavigateToSection(link.href)}
+                                            className="text-gray-300 hover:text-cyan-400 transition-colors"
+                                        >
+                                            {link.label}
+                                        </button>
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -101,12 +138,21 @@ function Footer() {
                         <ul className="space-y-2">
                             {footerLinks.services.map((link, index) => (
                                 <li key={index}>
-                                    <button
-                                        onClick={() => scrollToSection(link.href)}
-                                        className="text-gray-300 hover:text-cyan-400 transition-colors"
-                                    >
-                                        {link.label}
-                                    </button>
+                                    {link.type === 'route' ? (
+                                        <Link
+                                            to={link.href}
+                                            className="text-gray-300 hover:text-cyan-400 transition-colors"
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    ) : (
+                                        <button
+                                            onClick={() => handleNavigateToSection(link.href)}
+                                            className="text-gray-300 hover:text-cyan-400 transition-colors"
+                                        >
+                                            {link.label}
+                                        </button>
+                                    )}
                                 </li>
                             ))}
                         </ul>
@@ -118,12 +164,21 @@ function Footer() {
                         <ul className="space-y-2">
                             {footerLinks.support.map((link, index) => (
                                 <li key={index}>
-                                    <button
-                                        onClick={() => scrollToSection(link.href)}
-                                        className="text-gray-300 hover:text-cyan-400 transition-colors"
-                                    >
-                                        {link.label}
-                                    </button>
+                                    {link.type === 'route' ? (
+                                        <Link
+                                            to={link.href}
+                                            className="text-gray-300 hover:text-cyan-400 transition-colors"
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    ) : (
+                                        <button
+                                            onClick={() => handleNavigateToSection(link.href)}
+                                            className="text-gray-300 hover:text-cyan-400 transition-colors"
+                                        >
+                                            {link.label}
+                                        </button>
+                                    )}
                                 </li>
                             ))}
                         </ul>

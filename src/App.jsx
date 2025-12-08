@@ -10,6 +10,8 @@ import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import CaseStudyDetailPage from './pages/CaseStudyDetailPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 
 // Admin Pages
 import AdminLayout from './components/layouts/AdminLayout';
@@ -30,6 +32,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
             <Route path="/case-study/:slug" element={<CaseStudyDetailPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
           </Route>
 
           {/* Admin Login */}
