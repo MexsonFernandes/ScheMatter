@@ -33,7 +33,8 @@ function CapabilitiesSection() {
                     { name: 'FDM 3D Printing', desc: 'Cost-effective, fast and reliable—perfect for end use components, prototypes, structural parts, jigs & fixtures.' },
                     { name: 'CAD Modelling & Simulation', desc: 'Professional 3D modelling, assembly design, surface modelling & design validation using advanced CAD tools.' },
                     { name: 'Product Development Support', desc: 'Iterative design, prototyping and optimisation for startups, researchers and hardware innovators.' },
-                    { name: 'Collaborative 3D Development Platform', desc: 'A unique workspace where technical & non-technical clients can collaborate seamlessly with our design team.' }
+                    { name: 'Collaborative 3D Development Platform', desc: 'A unique workspace where technical & non-technical clients can collaborate seamlessly with our design team.' },
+                    { name: 'Resin Based Hi-Res 3D Printing', desc: 'High resolution rigid & flexible parts using 3D Systems Figure 4 DLP System.' }
                 ]
             }
         },
@@ -46,12 +47,12 @@ function CapabilitiesSection() {
                 description: 'Serving diverse industries with tailored solutions',
                 items: [
                     { name: 'Engineering & Industrial Design', desc: 'Functional prototypes, machine parts, fixtures, housings, R&D components.' },
-                    { name: 'Architecture', desc: 'Scale models, interior concepts, structural mock-ups, urban planning layouts.' },
+                    { name: 'Interior Design & Architecture', desc: 'CAD, rendering, prototyping and production of fixtures, furniture components & related items.' },
                     { name: 'Healthcare', desc: 'Anatomical models and surgical guides (non-clinical).' },
-                    { name: 'Art, Sculptures & Creative Media', desc: 'Custom figurines, installation elements, character models for film & animation.s' },
+                    { name: 'Art, Sculptures & Creative Media', desc: 'Custom figurines, installation elements, character models for film & animations.' },
                     { name: 'Research & Academia', desc: 'Experimental components, lab fixtures, concept visualisation models.' },
                     { name: 'Consumer Products', desc: 'Customized items, wearables, home gadgets, replacement parts & personalised creations.' },
-                    { name: 'Shipduilding', desc: 'A compact visual solution offering 3D models of ship designs, realistic rendered scenes, scaled representations, and interactive 3D presentations' }
+                    { name: 'Shipduilding', desc: 'A compact visual solution offering 3D models of ship designs, realistic rendered scenes, scaled models, and interactive 3D presentations.' }
                 ]
             }
         },
@@ -127,7 +128,7 @@ function CapabilitiesSection() {
                                                     <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                                                         {item.name}
                                                     </h4>
-                                                    <p className="text-sm text-gray-600">{item.desc}</p>
+                                                    <p className="text-sm text-gray-600 text-justify">{item.desc}</p>
                                                 </div>
                                             </div>
                                         </CardContent>

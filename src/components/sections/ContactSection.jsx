@@ -118,11 +118,11 @@ function ContactSection() {
                                 <div className="space-y-2 text-gray-300">
                                     <div className="flex justify-between">
                                         <span>Mon - Fri:</span>
-                                        <span>9:00 AM - 6:00 PM</span>
+                                        <span>10:00 AM - 5:30 PM</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span>Saturday:</span>
-                                        <span>10:00 AM - 4:00 PM</span>
+                                        <span>10:00 AM - 1:30 PM</span>
                                     </div>
                                 </div>
                             </div>

@@ -49,7 +49,6 @@ function HeroSection() {
 
                     {/* Main Headline */}
                     <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight animate-slide-up">
-                        Precision{' '}
                         <span className="bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text text-transparent">
                             3D Printing
                         </span>

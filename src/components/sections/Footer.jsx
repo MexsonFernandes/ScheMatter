@@ -82,7 +82,10 @@ function Footer() {
                             <span className="text-2xl font-bold">Schematter</span>
                         </div>
                         <p className="text-gray-300 mb-6 leading-relaxed">
-                            Precision 3D printing and CAD services based in Goa, India. Serving clients worldwide with innovative solutions for engineering, architecture, and creative projects.
+                            ScheMatter CAD and Printing (OPC) Private Limited <br />
+                            1st Floor, Office Nos. 5, 7, 9 & 11<br />
+                            Braganza Trade Centre, Opp. Remanso Hospital<br />
+                            Rajwaddo, Mapusa, Goa 403507
                         </p>
 
                         {/* Contact Info */}
@@ -95,6 +98,9 @@ function Footer() {
                             </div>
                             <div className="flex items-center space-x-3 text-gray-300">
                                 <Phone className="w-5 h-5 text-green-400" />
+                                <a href="tel:0832-2976999" className="hover:text-cyan-400 transition-colors">
+                                    0832-2976999
+                                </a>|&nbsp;
                                 <a href="tel:+919823406444" className="hover:text-cyan-400 transition-colors">
                                     +91-9823406444
                                 </a>

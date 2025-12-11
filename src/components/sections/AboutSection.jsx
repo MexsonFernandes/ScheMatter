@@ -37,11 +37,11 @@ function AboutSection() {
                             About <span className="gradient-text">Schematter</span>
                         </h2>
 
-                        <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                        <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
                             Located in <span className="font-semibold text-gray-800">Mapusa, Goa</span>, Schematter CAD & Printing is a recognized startup providing comprehensive 3D printing and CAD design services.
                         </p>
 
-                        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                        <p className="text-lg text-gray-600 mb-8 leading-relaxed text-justify">
                             We serve clients across various sectors including Manufacturing, Shipbuilding, Automotive, Engineering, Architecture, Research, Art, and Entertainment. Our mission is to bridge the gap between technical and non-technical individuals, enabling collaborative innovation.
                         </p>
 
@@ -94,8 +94,8 @@ function AboutSection() {
                         </div>
                         <div className="space-y-4 pt-8">
                             <div className="bg-gradient-to-br from-emerald-600 via-green-600 to-green-500 rounded-2xl p-6 text-white shadow-xl">
-                                <div className="text-3xl font-bold mb-2">24/7</div>
-                                <div className="text-sm opacity-90">Customer Support Available</div>
+                                <div className="text-3xl font-bold mb-2">7+</div>
+                                <div className="text-sm opacity-90">Years of Experience</div>
                             </div>
                             <div className="relative group overflow-hidden rounded-2xl shadow-xl">
                                 <img
