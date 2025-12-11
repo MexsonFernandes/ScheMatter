@@ -34,7 +34,7 @@ function HomePage() {
           <div className="flex flex-col items-center space-y-4">
             <div className="flex items-center space-x-2 text-primary font-semibold text-lg">
               <Mail className="w-6 h-6" />
-              <a href="mailto:carl.desouza@schematter.in" className="hover:underline">carl.desouza@schematter.in</a>
+              <a href="mailto:info@schematter.in" className="hover:underline">info@schematter.in</a>
             </div>
             <div className="flex items-center space-x-2 text-primary font-semibold text-lg">
               <PhoneCall className="w-6 h-6" />

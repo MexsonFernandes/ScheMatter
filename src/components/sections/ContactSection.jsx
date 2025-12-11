@@ -81,8 +81,8 @@ function ContactSection() {
                                         </div>
                                         <div>
                                             <div className="font-semibold text-lg mb-1">Phone</div>
-                                            <a href="tel:+919823406444" className="block text-gray-300 hover:text-white transition-colors">+91 9823406444</a>
                                             <a href="tel:08322976999" className="block text-gray-300 hover:text-white transition-colors">0832-2976999</a>
+                                            <a href="tel:+919823406444" className="block text-gray-300 hover:text-white transition-colors">+91 9823406444</a>
                                         </div>
                                     </div>
 
@@ -92,8 +92,8 @@ function ContactSection() {
                                         </div>
                                         <div>
                                             <div className="font-semibold text-lg mb-1">Email</div>
-                                            <a href="mailto:carl.desouza@schematter.in" className="block text-gray-300 hover:text-white transition-colors break-all">
-                                                carl.desouza@schematter.in
+                                            <a href="mailto:info@schematter.in" className="block text-gray-300 hover:text-white transition-colors break-all">
+                                                info@schematter.in
                                             </a>
                                         </div>
                                     </div>

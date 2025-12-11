@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Printer, Cog, Users, CheckCircle, ArrowRight } from 'lucide-react';
+import { Printer, Cog, Users, CheckCircle, ArrowRight, Ship } from 'lucide-react';
 import printing1 from '../../assets/images/3d_printing_1.jpg';
 import cad1 from '../../assets/images/cad_design_1.jpg';
-import collaborationIcon from '../../assets/images/collaboration_icon.png';
+import collaborationIcon from '../../assets/images/ship.png';
 
 function ServicesSection() {
     const services = [
@@ -34,16 +34,16 @@ function ServicesSection() {
             ]
         },
         {
-            icon: Users,
-            title: 'Collaboration Platform',
+            icon: Ship,
+            title: 'Shipbuilding Visualization',
             description: 'Unique platform connecting technical and non-technical individuals for collaborative projects',
             image: collaborationIcon,
             gradient: 'from-green-500 to-emerald-400',
             features: [
-                'Cross-disciplinary Teams',
-                'Project Management',
-                'Real-time Collaboration',
-                'Expert Consultation'
+                '3D representation of existing designs',
+                'Rendering with realistic background',
+                'Scaled Models',
+                'Interactive 3D presentations'
             ]
         }
     ];

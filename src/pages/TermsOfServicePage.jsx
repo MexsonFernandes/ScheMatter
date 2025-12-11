@@ -257,8 +257,8 @@ function TermsOfServicePage() {
                                     <div className="space-y-2 text-gray-700">
                                         <p className="flex items-center gap-2">
                                             <Mail className="w-4 h-4 text-green-600" />
-                                            <a href="mailto:carl.desouza@schematter.in" className="text-green-600 hover:underline">
-                                                carl.desouza@schematter.in
+                                            <a href="mailto:info@schematter.in" className="text-green-600 hover:underline">
+                                                info@schematter.in
                                             </a>
                                         </p>
                                         <p className="flex items-center gap-2">

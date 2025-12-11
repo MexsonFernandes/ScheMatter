@@ -43,7 +43,7 @@ function HeroSection() {
                     <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-8 animate-fade-in">
                         <Sparkles className="w-4 h-4 text-green-600" />
                         <span className="text-sm font-semibold bg-gradient-to-r from-green-700 via-green-600 to-green-500 bg-clip-text text-transparent">
-                            Serving India & Overseas
+                            Serving with expertise
                         </span>
                     </div>
 

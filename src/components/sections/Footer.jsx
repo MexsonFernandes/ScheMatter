@@ -89,14 +89,14 @@ function Footer() {
                         <div className="space-y-3">
                             <div className="flex items-center space-x-3 text-gray-300">
                                 <Mail className="w-5 h-5 text-green-400" />
-                                <a href="mailto:carl.desouza@schematter.in" className="hover:text-cyan-400 transition-colors">
-                                    carl.desouza@schematter.in
+                                <a href="mailto:info@schematter.in" className="hover:text-cyan-400 transition-colors">
+                                    info@schematter.in
                                 </a>
                             </div>
                             <div className="flex items-center space-x-3 text-gray-300">
                                 <Phone className="w-5 h-5 text-green-400" />
                                 <a href="tel:+919823406444" className="hover:text-cyan-400 transition-colors">
-                                    +91 9823406444
+                                    +91-9823406444
                                 </a>
                             </div>
                             <div className="flex items-center space-x-3 text-gray-300">

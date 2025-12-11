@@ -16,8 +16,8 @@ function CapabilitiesSection() {
                     { name: 'PLA', desc: 'Biodegradable, easy to print, ideal for prototypes, visual models & educational projects.' },
                     { name: 'ABS', desc: 'Strong, heat-resistant engineering plastic for functional parts, enclosures & mechanical components.' },
                     { name: 'PETG', desc: 'Durable, chemical-resistant, food-safe material suited for consumer products & industrial use.' },
-                    { name: 'Resin', desc: 'Ultra-high detail, smooth surface finish—perfect for jewellery, miniatures, dental models & art.' },
-                    { name: 'Nylon', desc: 'Flexible yet tough; great for gears, mechanical assemblies & engineering-grade output.' },
+                    { name: 'Resin', desc: 'High resolution functional rigid & flexible parts using OEM Resins from 3D Systems INC.' },
+                    // { name: 'Nylon', desc: 'Flexible yet tough; great for gears, mechanical assemblies & engineering-grade output.' },
                     { name: 'TPU', desc: 'Rubber-like elasticity; ideal for wearable prototypes, cushioning elements & impact-resistant parts.' }
                 ]
             }
@@ -30,7 +30,7 @@ function CapabilitiesSection() {
                 title: 'Advanced 3D Printing Technologies',
                 description: 'State-of-the-art equipment for precision manufacturing',
                 items: [
-                    { name: 'FDM 3D Printing', desc: 'Cost-effective, fast and reliable—perfect for prototypes, structural parts, jigs & fixtures.' },
+                    { name: 'FDM 3D Printing', desc: 'Cost-effective, fast and reliable—perfect for end use components, prototypes, structural parts, jigs & fixtures.' },
                     { name: 'CAD Modelling & Simulation', desc: 'Professional 3D modelling, assembly design, surface modelling & design validation using advanced CAD tools.' },
                     { name: 'Product Development Support', desc: 'Iterative design, prototyping and optimisation for startups, researchers and hardware innovators.' },
                     { name: 'Collaborative 3D Development Platform', desc: 'A unique workspace where technical & non-technical clients can collaborate seamlessly with our design team.' }
@@ -47,10 +47,11 @@ function CapabilitiesSection() {
                 items: [
                     { name: 'Engineering & Industrial Design', desc: 'Functional prototypes, machine parts, fixtures, housings, R&D components.' },
                     { name: 'Architecture', desc: 'Scale models, interior concepts, structural mock-ups, urban planning layouts.' },
-                    { name: 'Healthcare', desc: 'Anatomical models, dental impressions, surgical guides (non-clinical), prosthetic prototypes.' },
+                    { name: 'Healthcare', desc: 'Anatomical models and surgical guides (non-clinical).' },
                     { name: 'Art, Sculptures & Creative Media', desc: 'Custom figurines, installation elements, character models for film & animation.s' },
                     { name: 'Research & Academia', desc: 'Experimental components, lab fixtures, concept visualisation models.' },
-                    { name: 'Consumer Products', desc: 'Customized items, wearables, home gadgets, replacement parts & personalised creations.' }
+                    { name: 'Consumer Products', desc: 'Customized items, wearables, home gadgets, replacement parts & personalised creations.' },
+                    { name: 'Shipduilding', desc: 'A compact visual solution offering 3D models of ship designs, realistic rendered scenes, scaled representations, and interactive 3D presentations' }
                 ]
             }
         },
