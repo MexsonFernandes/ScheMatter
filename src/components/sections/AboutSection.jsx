@@ -92,7 +92,7 @@ function AboutSection() {
                                 <div className="text-sm opacity-90">Projects Delivered Successfully</div>
                             </div>
                         </div>
-                        <div className="space-y-4 pt-8">
+                        <div className="space-y-4">
                             <div className="bg-gradient-to-br from-emerald-600 via-green-600 to-green-500 rounded-2xl p-6 text-white shadow-xl">
                                 <div className="text-3xl font-bold mb-2">7+</div>
                                 <div className="text-sm opacity-90">Years of Experience</div>
