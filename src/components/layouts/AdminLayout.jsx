@@ -39,7 +39,7 @@ export default function AdminLayout() {
         <div className="flex flex-col h-full bg-slate-900 text-white">
             <div className="p-6 border-b border-slate-800">
                 <h1 className="text-xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-                    Schematter Admin
+                    ScheMatter Admin
                 </h1>
             </div>
             <nav className="flex-1 p-4 space-y-1">

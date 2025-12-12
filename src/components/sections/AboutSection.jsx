@@ -34,11 +34,11 @@ function AboutSection() {
                         </Badge>
 
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            About <span className="gradient-text">Schematter</span>
+                            About <span className="gradient-text">ScheMatter</span>
                         </h2>
 
                         <p className="text-lg text-gray-600 mb-6 leading-relaxed text-justify">
-                            Located in <span className="font-semibold text-gray-800">Mapusa, Goa</span>, Schematter CAD & Printing is a recognized startup providing comprehensive 3D printing and CAD design services.
+                            Located in <span className="font-semibold text-gray-800">Mapusa, Goa</span>, ScheMatter CAD & Printing is a recognized startup providing comprehensive 3D printing and CAD design services.
                         </p>
 
                         <p className="text-lg text-gray-600 mb-8 leading-relaxed text-justify">

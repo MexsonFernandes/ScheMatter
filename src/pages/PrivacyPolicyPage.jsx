@@ -47,7 +47,7 @@ function PrivacyPolicyPage() {
                             <div className="mb-8">
                                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
                                 <p className="text-gray-700 leading-relaxed">
-                                    Schematter CAD & Printing ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <strong>schematter.in</strong> and use our services.
+                                    ScheMatter CAD & Printing ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <strong>schematter.in</strong> and use our services.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mt-4">
                                     Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site or use our services.

@@ -47,7 +47,7 @@ function TermsOfServicePage() {
                             <div className="mb-8">
                                 <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Agreement to Terms</h2>
                                 <p className="text-gray-700 leading-relaxed">
-                                    These Terms of Service ("Terms") constitute a legally binding agreement between you and Schematter CAD & Printing ("Schematter," "we," "us," or "our") regarding your use of our website <strong>schematter.in</strong> and our 3D printing and CAD design services.
+                                    These Terms of Service ("Terms") constitute a legally binding agreement between you and ScheMatter CAD & Printing ("ScheMatter," "we," "us," or "our") regarding your use of our website <strong>schematter.in</strong> and our 3D printing and CAD design services.
                                 </p>
                                 <p className="text-gray-700 leading-relaxed mt-4">
                                     By accessing or using our services, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you must not use our services.
@@ -58,7 +58,7 @@ function TermsOfServicePage() {
                             <div className="mb-8">
                                 <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Services Provided</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    Schematter provides the following services:
+                                    ScheMatter provides the following services:
                                 </p>
                                 <ul className="list-disc pl-6 text-gray-700 space-y-2">
                                     <li><strong>3D Printing Services:</strong> Custom 3D printing using various materials and technologies (FDM, SLA, DLP, etc.)</li>
@@ -116,7 +116,7 @@ function TermsOfServicePage() {
 
                                 <h3 className="text-xl font-semibold text-gray-800 mb-3">5.2 Our Content</h3>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    All content on our website, including text, graphics, logos, images, and software, is the property of Schematter or its licensors and is protected by copyright, trademark, and other intellectual property laws.
+                                    All content on our website, including text, graphics, logos, images, and software, is the property of ScheMatter or its licensors and is protected by copyright, trademark, and other intellectual property laws.
                                 </p>
 
                                 <h3 className="text-xl font-semibold text-gray-800 mb-3">5.3 Confidentiality</h3>
@@ -242,7 +242,7 @@ function TermsOfServicePage() {
                             <div className="mb-8">
                                 <h2 className="text-2xl font-bold text-gray-900 mb-4">14. Entire Agreement</h2>
                                 <p className="text-gray-700 leading-relaxed">
-                                    These Terms, together with our Privacy Policy, constitute the entire agreement between you and Schematter regarding the use of our services and supersede all prior agreements and understandings.
+                                    These Terms, together with our Privacy Policy, constitute the entire agreement between you and ScheMatter regarding the use of our services and supersede all prior agreements and understandings.
                                 </p>
                             </div>
 

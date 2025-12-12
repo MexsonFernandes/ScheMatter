@@ -60,7 +60,7 @@ function Header() {
                     <Link to="/" className="flex items-center">
                         <img
                             src={logo}
-                            alt="Schematter Logo"
+                            alt="ScheMatter Logo"
                             className="h-12 w-auto"
                         />
                     </Link>

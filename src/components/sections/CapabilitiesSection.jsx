@@ -64,11 +64,10 @@ function CapabilitiesSection() {
                 title: 'Technical Specifications',
                 description: 'Professional-grade capabilities for your projects',
                 items: [
-                    { name: 'Build Volume', desc: 'Large-format printing available for architectural & industrial-scale models.' },
+                    { name: 'Build Volume', desc: 'FDM 3D Printers with build volume of upto 300 x 300 x 300 mm and High-Res DLP System has build volume of 24 x 70 x 196 mm.' },
                     { name: 'Material Strength Profiles', desc: 'Tensile, flexural & thermal properties supplied on request based on material selection.' },
-                    { name: 'Accuracy', desc: '±0.1mm dimensional accuracy' },
-                    { name: 'Design File Support', desc: 'STL, OBJ, STEP, IGES, Fusion files & custom engineering formats.s' },
-                    { name: 'Quality Assurance', desc: 'Dimensional checks, test prints, structural validation & model optimisation included.' },
+                    { name: 'Design File Support', desc: 'STL, OBJ, STEP, IGES, Fusion files & custom engineering formats.' },
+                    { name: 'Refinement', desc: 'Layer height of as low as 50 micron' },
                 ]
             }
         }

@@ -64,7 +64,7 @@ export default function Dashboard() {
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
-                <h2 className="text-xl font-bold mb-4">Welcome to Schematter Admin</h2>
+                <h2 className="text-xl font-bold mb-4">Welcome to ScheMatter Admin</h2>
                 <p className="text-gray-600">Select a section from the sidebar to manage your content.</p>
             </div>
         </div>

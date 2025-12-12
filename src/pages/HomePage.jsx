@@ -29,7 +29,7 @@ function HomePage() {
             Site Under Construction
           </h1>
           <p className="text-lg text-gray-600 mb-6">
-            We're busy building a new digital home for Schematter. In the meantime, you can reach out directly for all your 3D printing and CAD needs.
+            We're busy building a new digital home for ScheMatter. In the meantime, you can reach out directly for all your 3D printing and CAD needs.
           </p>
           <div className="flex flex-col items-center space-y-4">
             <div className="flex items-center space-x-2 text-primary font-semibold text-lg">

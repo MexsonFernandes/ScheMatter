@@ -170,7 +170,7 @@ Add to each case study detail page:
 
 ```html
 <head>
-  <title>{caseStudy.title} | Schematter Case Study</title>
+  <title>{caseStudy.title} | ScheMatter Case Study</title>
   <meta name="description" content={caseStudy.summary} />
   <meta property="og:title" content={caseStudy.title} />
   <meta property="og:description" content={caseStudy.summary} />

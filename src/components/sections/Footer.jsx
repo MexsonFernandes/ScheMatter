@@ -76,10 +76,10 @@ function Footer() {
                         <div className="flex items-center space-x-2 mb-4">
                             <img
                                 src={logo}
-                                alt="Schematter Logo"
+                                alt="ScheMatter Logo"
                                 className="h-12 w-auto"
                             />
-                            <span className="text-2xl font-bold">Schematter</span>
+                            <span className="text-2xl font-bold">ScheMatter</span>
                         </div>
                         <p className="text-gray-300 mb-6 leading-relaxed">
                             ScheMatter CAD and Printing (OPC) Private Limited <br />
@@ -196,7 +196,7 @@ function Footer() {
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         {/* Copyright */}
                         <div className="text-gray-400 text-sm">
-                            © {currentYear} Schematter CAD & Printing. All rights reserved.
+                            &copy; {currentYear} ScheMatter CAD & Printing. All rights reserved.
                         </div>
 
                         {/* Social Links */}
