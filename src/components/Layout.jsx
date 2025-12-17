@@ -6,7 +6,7 @@ import { Cog } from 'lucide-react';
 
 function Layout({ children }) {
   const location = useLocation();
-  
+
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
@@ -18,40 +18,36 @@ function Layout({ children }) {
                 <Cog className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-800">Schematter</h1>
+                <h1 className="text-xl font-bold text-gray-800">ScheMatter</h1>
                 <p className="text-sm text-gray-600">CAD & Printing</p>
               </div>
             </Link>
             <nav className="hidden md:flex items-center space-x-6">
-              <Link 
-                to="/#services" 
-                className={`transition-colors ${
-                  location.pathname === '/' ? 'text-green-600' : 'text-gray-600 hover:text-green-600'
-                }`}
+              <Link
+                to="/#services"
+                className={`transition-colors ${location.pathname === '/' ? 'text-green-600' : 'text-gray-600 hover:text-green-600'
+                  }`}
               >
                 Services
               </Link>
-              <Link 
-                to="/case-studies" 
-                className={`transition-colors ${
-                  location.pathname === '/case-studies' ? 'text-green-600' : 'text-gray-600 hover:text-green-600'
-                }`}
+              <Link
+                to="/case-studies"
+                className={`transition-colors ${location.pathname === '/case-studies' ? 'text-green-600' : 'text-gray-600 hover:text-green-600'
+                  }`}
               >
                 Case Studies
               </Link>
-              <Link 
-                to="/#about" 
-                className={`transition-colors ${
-                  location.pathname === '/' ? 'text-green-600' : 'text-gray-600 hover:text-green-600'
-                }`}
+              <Link
+                to="/#about"
+                className={`transition-colors ${location.pathname === '/' ? 'text-green-600' : 'text-gray-600 hover:text-green-600'
+                  }`}
               >
                 About
               </Link>
-              <Link 
-                to="/#contact" 
-                className={`transition-colors ${
-                  location.pathname === '/' ? 'text-green-600' : 'text-gray-600 hover:text-green-600'
-                }`}
+              <Link
+                to="/#contact"
+                className={`transition-colors ${location.pathname === '/' ? 'text-green-600' : 'text-gray-600 hover:text-green-600'
+                  }`}
               >
                 Contact
               </Link>
@@ -77,7 +73,7 @@ function Layout({ children }) {
                   <Cog className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold">Schematter</h3>
+                  <h3 className="font-bold">ScheMatter</h3>
                   <p className="text-sm text-gray-400">CAD & Printing</p>
                 </div>
               </div>
@@ -85,7 +81,7 @@ function Layout({ children }) {
                 Precision 3D printing and CAD services for innovative projects.
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -95,7 +91,7 @@ function Layout({ children }) {
                 <li>Collaboration Platform</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Industries</h4>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -105,7 +101,7 @@ function Layout({ children }) {
                 <li>Art & Entertainment</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-gray-400">
@@ -115,11 +111,11 @@ function Layout({ children }) {
               </ul>
             </div>
           </div>
-          
+
           <Separator className="my-8 bg-white/20" />
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-            <p>&copy; 2024 Schematter CAD & Printing. All rights reserved.</p>
+            <p>&copy; 2024 ScheMatter CAD & Printing. All rights reserved.</p>
             <p>Goa DoIT Recognised Startup</p>
           </div>
         </div>

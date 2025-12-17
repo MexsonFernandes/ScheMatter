@@ -75,6 +75,14 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /*  ScheMatter Brand Colors - Green Theme */
+  --brand-green: #168a20;
+  --brand-green-light: #22c55e;
+  --brand-green-dark: #15803d;
+  --brand-gray: #5a5a5a;
+  --tech-gradient: linear-gradient(135deg, #15803d 0%, #168a20 50%, #22c55e 100%);
+  --tech-gradient-hover: linear-gradient(135deg, #166534 0%, #15803d 50%, #16a34a 100%);
 }
 
 .dark {
@@ -115,18 +123,144 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23059669;stop-opacity:1" /><stop offset="50%" style="stop-color:%2316a34a;stop-opacity:1" /><stop offset="100%" style="stop-color:%23065f46;stop-opacity:1" /></linearGradient><filter id="shadow"><feDropShadow dx="1" dy="1" stdDeviation="0.5" flood-color="%23000000" flood-opacity="0.3"/></filter></defs><path d="M12 2L14 4L16 2L18 4L20 6L18 8L20 10L18 12L16 14L14 12L12 14L10 12L8 14L6 12L4 10L6 8L4 6L6 4L8 2L10 4L12 2Z" fill="url(%23grad1)" stroke="%23374151" stroke-width="0.5" filter="url(%23shadow)"/><circle cx="12" cy="8" r="1.5" fill="%23ffffff" opacity="0.8"/><circle cx="8" cy="12" r="1" fill="%23ffffff" opacity="0.6"/><circle cx="16" cy="12" r="1" fill="%23ffffff" opacity="0.6"/></svg>') 12 12, auto;
   }
 
   /* Custom cursor for interactive elements */
-  button, a, [role="button"], input[type="submit"], input[type="button"] {
+  button,
+  a,
+  [role="button"],
+  input[type="submit"],
+  input[type="button"] {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23059669;stop-opacity:1" /><stop offset="50%" style="stop-color:%2316a34a;stop-opacity:1" /><stop offset="100%" style="stop-color:%23065f46;stop-opacity:1" /></linearGradient><filter id="shadow2"><feDropShadow dx="2" dy="2" stdDeviation="1" flood-color="%23000000" flood-opacity="0.4"/></filter></defs><path d="M14 2L17 5L21 3L24 6L26 10L23 13L26 16L23 19L21 23L17 21L14 24L11 21L7 23L4 19L2 16L5 13L2 10L5 6L7 3L11 5L14 2Z" fill="url(%23grad2)" stroke="%23374151" stroke-width="0.8" filter="url(%23shadow2)"/><circle cx="14" cy="9" r="2" fill="%23ffffff" opacity="0.9"/><circle cx="9" cy="14" r="1.5" fill="%23ffffff" opacity="0.7"/><circle cx="19" cy="14" r="1.5" fill="%23ffffff" opacity="0.7"/><circle cx="14" cy="19" r="1" fill="%23ffffff" opacity="0.5"/></svg>') 14 14, pointer;
   }
 
   /* Custom cursor for text inputs */
-  input[type="text"], input[type="email"], textarea {
+  input[type="text"],
+  input[type="email"],
+  textarea {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none"><defs><linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23059669;stop-opacity:1" /><stop offset="50%" style="stop-color:%2316a34a;stop-opacity:1" /><stop offset="100%" style="stop-color:%23065f46;stop-opacity:1" /></linearGradient></defs><rect x="9" y="2" width="2" height="20" fill="url(%23grad3)" rx="1"/><rect x="6" y="2" width="8" height="3" fill="url(%23grad3)" rx="1.5"/><rect x="6" y="19" width="8" height="3" fill="url(%23grad3)" rx="1.5"/><circle cx="10" cy="6" r="1" fill="%23ffffff" opacity="0.8"/><circle cx="10" cy="18" r="1" fill="%23ffffff" opacity="0.8"/></svg>') 10 12, text;
   }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Utility Classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #15803d 0%, #168a20 50%, #22c55e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-scroll {
+  animation: scroll 2s ease-in-out infinite;
 }

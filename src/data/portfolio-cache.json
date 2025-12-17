@@ -1,0 +1,49 @@
+[
+  {
+    "id": "f5067532-64ee-4aa4-ba3a-a8a6512a1294",
+    "title": "Custom Wearable Wristband Prototype",
+    "slug": "Custom Wearable Wristband Prototype",
+    "description": "A prototype for a fitness-tracking wearable device built for a startup developing ergonomic tech products.",
+    "cover_image_url": "https://xwrvleopahxiidroomgl.supabase.co/storage/v1/object/public/images/portfolio/0.7658092155435944.jpg",
+    "gallery_urls": null,
+    "tags": [
+      "Wearable",
+      "Lifestyle"
+    ],
+    "live_url": "",
+    "repo_url": "",
+    "is_published": true,
+    "created_at": "2025-12-08T13:06:30.926165+00:00",
+    "updated_at": "2025-12-08T13:06:30.926165+00:00"
+  },
+  {
+    "id": "5c19bd91-39ca-4aa7-a20b-0927796e0182",
+    "title": "Functional Mechanical Gear Assembly",
+    "slug": "Functional Mechanical Gear Assembly",
+    "description": "A working mechanical gear system designed and printed for an engineering R&D team testing torque behavior.",
+    "cover_image_url": "https://xwrvleopahxiidroomgl.supabase.co/storage/v1/object/public/images/portfolio/0.12791447535511524.png",
+    "gallery_urls": null,
+    "tags": [
+      "Gears"
+    ],
+    "live_url": "",
+    "repo_url": "",
+    "is_published": true,
+    "created_at": "2025-12-08T13:06:02.921024+00:00",
+    "updated_at": "2025-12-08T13:06:02.921024+00:00"
+  },
+  {
+    "id": "8b29f4e3-a19e-401d-9a26-6d4e098956ea",
+    "title": "Architectural Scale Model – Luxury Villa",
+    "slug": "-",
+    "description": "A detailed 3D-printed miniature of a modern luxury villa created for an architect in Goa.\nThe model showcases spatial planning, façade details, landscaping elements, and material contrast.",
+    "cover_image_url": "https://xwrvleopahxiidroomgl.supabase.co/storage/v1/object/public/images/portfolio/0.6696366543477125.webp",
+    "gallery_urls": null,
+    "tags": null,
+    "live_url": "",
+    "repo_url": "",
+    "is_published": true,
+    "created_at": "2025-12-08T13:02:48.600789+00:00",
+    "updated_at": "2025-12-08T13:02:48.600789+00:00"
+  }
+]
