@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import { Button } from '../../components/ui/button';
-import { Plus, Pencil, Trash2, ExternalLink, Image as ImageIcon } from 'lucide-react';
+import { Plus, Pencil, Trash2, ExternalLink, Image as ImageIcon, Rocket } from 'lucide-react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from '../../components/ui/sheet';
 import { useForm } from 'react-hook-form';
 
@@ -24,13 +24,46 @@ export default function Portfolio() {
         await supabase.from('landing_portfolio_items').delete().eq('id', id);
     };
 
+    const handleDeploy = async () => {
+        const deployHookUrl = import.meta.env.VITE_RENDER_DEPLOY_HOOK;
+
+        if (!deployHookUrl) {
+            alert('Deploy hook URL is not configured. Please check your .env file.');
+            return;
+        }
+
+        if (!confirm('Are you sure you want to trigger a deployment? This will publish all latest changes to the live site.')) {
+            return;
+        }
+
+        try {
+            const response = await fetch(deployHookUrl, {
+                method: 'POST',
+            });
+
+            if (response.ok) {
+                alert('Deployment triggered successfully! It may take a few minutes for changes to reflect.');
+            } else {
+                throw new Error('Failed to trigger deployment');
+            }
+        } catch (error) {
+            console.error('Deployment error:', error);
+            alert('Failed to trigger deployment. Please try again later.');
+        }
+    };
+
     return (
         <div className="space-y-6">
             <div className="flex justify-between items-center">
                 <h1 className="text-3xl font-bold text-gray-900">Portfolio Projects</h1>
-                <Button onClick={() => { setEditingItem(null); setIsSheetOpen(true); }}>
-                    <Plus className="w-4 h-4 mr-2" /> New Project
-                </Button>
+                <div className="flex gap-2">
+                    <Button variant="outline" onClick={handleDeploy} className="text-blue-600 border-blue-600 hover:bg-blue-50">
+                        <Rocket className="w-4 h-4 mr-2" /> Deploy Changes
+                    </Button>
+                    <Button onClick={() => { setEditingItem(null); setIsSheetOpen(true); }}>
+                        <Plus className="w-4 h-4 mr-2" /> New Project
+                    </Button>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
