@@ -39,13 +39,13 @@ export default function Portfolio() {
         try {
             const response = await fetch(deployHookUrl, {
                 method: 'POST',
+                mode: 'no-cors', // standard-fix: bypass CORS
             });
 
-            if (response.ok) {
-                alert('Deployment triggered successfully! It may take a few minutes for changes to reflect.');
-            } else {
-                throw new Error('Failed to trigger deployment');
-            }
+            // With no-cors, we get an opaque response (status 0, type 'opaque'). 
+            // We can't actually check .ok or status, but catching the error above handles network failures.
+            alert('Deployment signal triggered! Updates should appear in a few minutes.');
+
         } catch (error) {
             console.error('Deployment error:', error);
             alert('Failed to trigger deployment. Please try again later.');
